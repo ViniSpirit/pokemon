@@ -7,7 +7,7 @@ function Home() {
   const [url, setUrl] = useState("")
 
   function randomPokemon() {
-    const url = "http://pokeapi.co/api/v2/pokemon/"
+    const url = "https://pokeapi.co/api/v2/pokemon/"
     const random = Math.floor(Math.random() * 150) + 1
     const urlRandom = url + random.toString()
     setUrl(urlRandom)
