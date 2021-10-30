@@ -9,25 +9,24 @@ export function PokemonContext({ children }) {
   const [loading, setLoading] = useState(false)
 
   function randomPokemon() {
-    setLoading(true)
     const url = "https://pokeapi.co/api/v2/pokemon/"
     const random = Math.floor(Math.random() * 898) + 1
     const urlRandom = url + random.toString()
     setUrl(urlRandom)
   }
 
-  async function getPokemon() {
-    try {
-      const { data } = await axios.get(url)
-      setPokemon(data)
-      console.log(data)
-    } catch (error) {
-      console.error(error.message)
-    }
-    setLoading(false)
-  }
-
   useEffect(() => {
+    async function getPokemon() {
+      setLoading(true)
+      try {
+        const { data } = await axios.get(url)
+        setPokemon(data)
+      } catch (error) {
+        console.error(error.message)
+      }
+      setLoading(false)
+    }
+
     if (url !== null) getPokemon()
   }, [url])
 

@@ -2,7 +2,7 @@ import styles from "./defaultImage.module.css"
 import Image from "next/image"
 import defaultImage from "../../images/defaultImage.png"
 
-function DefaultImage() {
+function DefaultContainer() {
   return (
     <div className={styles.defaultImage}>
       <Image src={defaultImage} width={200} height={200} />
@@ -10,4 +10,4 @@ function DefaultImage() {
   )
 }
 
-export default DefaultImage
+export default DefaultContainer

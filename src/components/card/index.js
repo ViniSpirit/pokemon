@@ -9,11 +9,13 @@ function Card() {
   const { pokemon, loading } = useContext(RandomPokemonContext)
 
   return (
-    <div className={styles.card}>
-      <p>#{pokemon?.id}</p>
-      {loading ? <Loading /> : <Sprite />}
-      <PokemonInfo />
-    </div>
+    <>
+      <div className={styles.card}>
+        <p>#{pokemon?.id}</p>
+        {loading ? <Loading /> : <Sprite />}
+        <PokemonInfo />
+      </div>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import Card from "../components/card"
-import DefaultImage from "../components/defaultImage"
+import DefaultContainer from "../components/defaultContainer"
 import Button from "../components/button"
 
 import { useContext } from "react"
@@ -14,7 +14,7 @@ function Home() {
     <main className="main defaultBackground" id={firstType}>
       <h1>Escolha Seu Pokémon</h1>
       <Button />
-      {pokemon === null ? <DefaultImage /> : <Card />}
+      {pokemon === null ? <DefaultContainer /> : <Card />}
     </main>
   )
 }
