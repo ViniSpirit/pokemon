@@ -1,8 +1,9 @@
 .card {
+  position: relative;
   height: 400px;
   width: 400px;
   max-width: 90%;
-  padding: 20px;
+  padding: 13px;
   background-color: #fff;
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 6%);
   border-radius: 8px;
@@ -10,14 +11,4 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-}
-
-.name {
-  font-size: 25px;
-}
-
-.info {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }

@@ -15,56 +15,66 @@
 }
 
 .defaultBackground {
-  background-color: #f3f5f2;
+  background: linear-gradient(to right, rgb(218, 226, 248), rgb(214, 164, 164));
 }
 
-#rock {
-  background-color: rgb(148, 81, 81);
-}
-#ghost {
-  background-color: rgb(247, 247, 247);
-}
-#electric {
-  background-color: rgb(255, 255, 161);
-}
 #bug {
-  background-color: #f6d6a7;
+  background: #f6d6a7;
 }
 #poison {
-  background-color: #e0a7f6;
+  background: #e0a7f6;
 }
 #normal {
-  background-color: #f4f4f4;
+  background: #f4f4f4;
 }
-#fairy {
-  background-color: rgba(255, 192, 203, 0.863);
-}
+
 #fire {
-  background-color: #fbe3df;
+  background: #f0998a;
 }
 #grass {
-  background-color: #e2f9e1;
+  background: #ccfccb;
 }
 #water {
-  background-color: #e0f1fd;
+  background: #a0d5fc;
 }
 
 #ground {
-  background-color: #593636;
+  background: #593636;
 }
 
 #fighting {
-  background-color: #8c864c;
+  background: #8c864c;
 }
 #ghost {
-  background-color: #2f3a3b;
+  background: #e2e7d8;
 }
 #psychic {
-  background-color: #8d44b8;
+  background: #8d44b8;
 }
 #ice {
-  background-color: #4c898c;
+  background: #6acacf;
 }
 #dragon {
-  background-color: #163e41;
+  background: #163e41;
+}
+#rock {
+  background: rgb(148, 81, 81);
+}
+#electric {
+  background: rgb(253, 253, 154);
+}
+#fairy {
+  background: rgba(255, 192, 203, 0.863);
+}
+#dark {
+  background: rgba(66, 66, 66, 0.863);
+}
+#steel {
+  background: rgba(134, 134, 134, 0.863);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
 }
