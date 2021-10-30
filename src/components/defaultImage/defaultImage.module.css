@@ -1,4 +1,4 @@
-.card {
+.defaultImage {
   height: 400px;
   width: 400px;
   max-width: 90%;
@@ -7,17 +7,7 @@
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 6%);
   border-radius: 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.name {
-  font-size: 25px;
-}
-
-.info {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
