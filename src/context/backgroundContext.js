@@ -4,11 +4,11 @@ import { RandomPokemonContext } from "./randomPokemonContext"
 export const BackgroundContext = createContext()
 
 const types = {
-  bug: "#3c9851",
+  bug: "#227535",
   dark: "#595978",
   dragon: "#62cbd8",
   electric: "#fbfb72",
-  fairy: "#e91269",
+  fairy: "#eb88e5",
   fighting: "#ee6238",
   fire: "#fc4a5a",
   flying: "#95b3c7",
@@ -39,8 +39,18 @@ export function Background({ children }) {
     return types[pokemonTypes[0]]
   }
 
+  function typeAndBackground() {
+    if (!pokemon) return
+
+    return pokemon.types.map((item) => {
+      return { type: item.type.name, bg: types[item.type.name] }
+    })
+  }
+
   return (
-    <BackgroundContext.Provider value={generateBackground}>
+    <BackgroundContext.Provider
+      value={{ generateBackground, typeAndBackground }}
+    >
       {children}
     </BackgroundContext.Provider>
   )

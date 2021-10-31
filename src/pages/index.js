@@ -8,14 +8,13 @@ import { BackgroundContext } from "../context/backgroundContext"
 
 function Home() {
   const { pokemon } = useContext(RandomPokemonContext)
-  const generateBackground = useContext(BackgroundContext)
+  const { generateBackground } = useContext(BackgroundContext)
 
   return (
     <main
       className="main defaultBackground"
       style={{ background: generateBackground() }}
     >
-      <h1>Escolha Seu Pokémon</h1>
       <Button />
       {pokemon === null ? <DefaultContainer /> : <Card />}
     </main>

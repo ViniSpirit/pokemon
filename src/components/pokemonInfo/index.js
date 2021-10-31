@@ -1,9 +1,14 @@
 import styles from "./pokemonInfo.module.css"
 import { useContext } from "react"
 import { RandomPokemonContext } from "../../context/randomPokemonContext"
+import { BackgroundContext } from "../../context/backgroundContext"
 
 function PokemonInfo() {
   const { pokemon } = useContext(RandomPokemonContext)
+
+  const { typeAndBackground } = useContext(BackgroundContext)
+
+  const typesAndBg = typeAndBackground()
 
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
@@ -23,8 +28,14 @@ function PokemonInfo() {
       </div>
       <div>
         <h3>Tipo:</h3>
-        {pokemon?.types?.map((item) => (
-          <p key={Math.random()}>{item.type.name}</p>
+        {typesAndBg.map((item) => (
+          <p
+            style={{ background: item.bg }}
+            key={Math.random()}
+            className={styles.types}
+          >
+            {item.type}
+          </p>
         ))}
       </div>
     </div>
