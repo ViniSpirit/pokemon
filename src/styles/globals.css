@@ -17,9 +17,3 @@
 .defaultBackground {
   background: linear-gradient(rgb(218, 226, 248), rgb(214, 164, 164));
 }
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 25px;
-  }
-}

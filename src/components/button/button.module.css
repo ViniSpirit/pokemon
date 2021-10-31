@@ -14,7 +14,12 @@
 }
 
 .button:hover {
-  background-color: #fff;
-  color: #333;
-  border: 2px #3498db solid;
+  background-color: #237db9;
+}
+
+.button:disabled,
+.button[disabled] {
+  opacity: 0.5;
+  background-color: #237db9;
+  cursor: not-allowed;
 }

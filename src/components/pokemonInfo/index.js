@@ -17,17 +17,17 @@ function PokemonInfo() {
   return (
     <div className={styles.info}>
       <div>
-        <h3>Nome:</h3>
+        <h3>Name:</h3>
         <p className={styles.name}>{capitalizeFirstLetter(pokemon?.name)}</p>
       </div>
       <div>
-        <h3>Habilidades:</h3>
+        <h3>Skills:</h3>
         {pokemon?.abilities.map((item) => (
           <p key={Math.random()}>{item.ability.name}</p>
         ))}
       </div>
       <div>
-        <h3>Tipo:</h3>
+        <h3>Type:</h3>
         {typesAndBg.map((item) => (
           <p
             style={{ background: item.bg }}
