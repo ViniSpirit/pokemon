@@ -15,7 +15,7 @@
 }
 
 .defaultBackground {
-  background: linear-gradient(to right, rgb(218, 226, 248), rgb(214, 164, 164));
+  background: linear-gradient(rgb(218, 226, 248), rgb(214, 164, 164));
 }
 
 @media (max-width: 600px) {
