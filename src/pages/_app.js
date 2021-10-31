@@ -2,6 +2,7 @@ import "../styles/globals.css"
 import Head from "next/head"
 
 import { PokemonContext } from "../context/randomPokemonContext"
+import { Background } from "../context/backgroundContext"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -30,7 +31,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <PokemonContext>
-        <Component {...pageProps} />
+        <Background>
+          <Component {...pageProps} />
+        </Background>
       </PokemonContext>
     </>
   )
