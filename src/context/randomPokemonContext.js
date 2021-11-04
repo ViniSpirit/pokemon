@@ -21,7 +21,6 @@ export function PokemonContext({ children }) {
       try {
         const { data } = await axios.get(url)
         setPokemon(data)
-        console.log(data)
       } catch (error) {
         console.error(error.message)
       }
